@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2B2D30"
+    android:backgroundTint="#6597B2"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textViewTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Time: "
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.125" />
+
+    <TextView
+        android:id="@+id/textViewScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Score: "
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTime"
+        app:layout_constraintVertical_bias="0.919" />
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="364dp"
+        android:layout_height="362dp"
+        app:columnCount="3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rowCount="3">
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:contentDescription="A cute yellow duck"
+            android:onClick="increaseScore"
+            app:layout_column="0"
+            app:layout_row="0"
+            app:srcCompat="@drawable/duck" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:contentDescription="A cute yellow duck"
+            android:onClick="increaseScore"
+            app:layout_column="1"
+            app:layout_row="0"
+            app:srcCompat="@drawable/duck" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:contentDescription="A cute yellow duck"
+            android:onClick="increaseScore"
+            app:layout_column="2"
+            app:layout_row="0"
+            app:srcCompat="@drawable/duck" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:contentDescription="A cute yellow duck"
+            android:onClick="increaseScore"
+            app:layout_column="0"
+            app:layout_row="1"
+            app:srcCompat="@drawable/duck" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:contentDescription="A cute yellow duck"
+            android:onClick="increaseScore"
+            app:layout_column="1"
+            app:layout_row="1"
+            app:srcCompat="@drawable/duck" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:contentDescription="A cute yellow duck"
+            android:onClick="increaseScore"
+            app:layout_column="2"
+            app:layout_row="1"
+            app:srcCompat="@drawable/duck" />
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:contentDescription="A cute yellow duck"
+            android:onClick="increaseScore"
+            app:layout_column="0"
+            app:layout_row="2"
+            app:srcCompat="@drawable/duck" />
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:contentDescription="A cute yellow duck"
+            android:onClick="increaseScore"
+            app:layout_column="1"
+            app:layout_row="2"
+            app:srcCompat="@drawable/duck" />
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:contentDescription="A cute yellow duck"
+            android:onClick="increaseScore"
+            app:layout_column="2"
+            app:layout_row="2"
+            app:srcCompat="@drawable/duck" />
+
+
+    </androidx.gridlayout.widget.GridLayout>
+
+    <Button
+        android:id="@+id/buttonStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="start"
+        android:text="START"
+        android:textColorLink="#624C9B"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewTopScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TOP SCORE:"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.08"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.052" />
+
+    <Button
+        android:id="@+id/ButtonPause"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:background="@drawable/rounded_button"
+        android:onClick="pause"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.937"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.035" />
+
+    <TextView
+        android:id="@+id/textViewPause"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:text="❚ ❚"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ButtonPause"
+        app:layout_constraintEnd_toEndOf="@+id/ButtonPause"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/ButtonPause"
+        app:layout_constraintTop_toTopOf="@+id/ButtonPause"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
